@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 import Button from '../../UI/Button/Button';
 import './CourseInput.css';
@@ -27,7 +28,7 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={fcClasses}>
+      <div className={!isValid && 'invalid'}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
       </div>
